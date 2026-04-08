@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    padding: 20px; /*espaço na pagina */
+    line-height: 1.5;
+    color: #213c5a;
+    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+}
+
+.resume {
+    max-width: 1400px; /* Limita a largura máxima para melhor leitura */
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+    overflow: hidden;
+
+}
+
+.header {
+    background: linear-gradient(135deg, #0b2b40 0%, #123d54 100%);
+    color: white;
+    padding: 35px 40px 25px 40px;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Tamanho responsivo do título */
+
+}
+
+.texto {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    /*padding: 20px 280px;*/
+    padding: 20px 10%;
+    border-radius: 50px;
+    margin-top: 20px;
+    /*height: 0px;*/
+    height: auto;
+   
+}
+
+
+
+.texto .setion {
+
+    /*display: absolute;*/
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    text-align: justify;
+    width: 100%; /*Ocupa a largura do pai */
+
+}
+
+.container {
+    display: flex;
+    /*gap: 6px;*/
+    /* espaçamento entre colunas */
+    flex-wrap: wrap; /* Permite quebrar linhas no zoom */
+    gap: 30px;
+    padding: 200px;
+   /* grid-template-columns: 1fr 1fr 1fr;*/
+    /* 3 colunas de largura igual */
+    justify-content: center;
+    /*align-items: center;*/
+    align-items: flex-start;
+    /*padding-top: 80px;*/
+    padding: 40px 20px;
+
+}
+
+
+/*
+.container>* {
+    flex: 1;
+    /* cada filho ocupa largura igual
+    
+}*/
+
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* espaçamento entre itens dentro da coluna */
+    align-items: center;
+    /*border-width: 2px;*/
+    align-items: center;
+    flex: 1;
+    min-height: 200px; /* Largura mínima antes de quebrar */
+    /*border-style: solid;
+    border: none;*/
+}
+/*
+.coluna .tecnologia {
+    align-items: center;
+}
+    */
+
+.imagem {
+   /* width: 200px;
+    height: 200px;
+    */
+    width: 100%;
+    max-width: 200px;  /* Limite máximo */
+    height: 200px; 
+    aspect-ratio: 1 / 1; /* Mantém a proporção quadrada */
+   /* justify-items: center; */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    object-fit: contain; /* Mantém proporção da imagem */
+    transition: transform 0.3s, filter 0.3s; /* Animação suave para hover */
+}
+    .tecnologia{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+.tecnologia:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.button{
+    display: flex;
+    justify-content: left   ;
+    padding: 40px 20px;
+}
+.botao {
+    /*(background: none;*/
+    background: linear-gradient(135deg, #0b2b40 0% #123d54 100%);
+    border: none;
+    /*font: inherit;
+    color: inherit;*/
+    color: rgb(68, 64, 64);
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: transform 0.3s, background-color 0.3s;
+    /*text-align: left;
+    display: block;
+    margin: 0 auto;*/
+}
+
+
+   
+.botao:hover {
+     background: linear-gradient(135deg, #123d54 0%, #1a4d6b 100%);
+    color: #e9eaf0;
+   /* text-decoration: underline; */
+   text-decoration: none;
+}
+
+.footer-note {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /*margin: -600px auto;
+    padding: 20px 0;
+    */
+    padding: 20px;
+    text-align: center;
+    color: rgb(20, 20, 20);
+    background-color: rgba(238, 238, 245, 0.59);
+    /*position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    */
+    border: 1px solid #ddd;
+}
+
+

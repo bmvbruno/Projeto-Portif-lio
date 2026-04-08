@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo</title>
+    <link rel="stylesheet" href="css/curriculo.css">
+    <link rel="icon" type="image/png" href="assest/logo Dev Bruno.png">
+</head>
+
+<body>
+    <div class="resume">
+        <div class="header">
+
+            <div class="header-name">
+                <h1>BRUNO MARQUES DE VASCONCELOS</h1>
+                <!-- Foto de perfil inserido por mim, Bruno-->
+                <img src="assest/Bruno2.jpeg" alt="Foto de Bruno" class="profile-img">
+            </div>
+
+
+            <div class="subtitle">Engenheiro de Software</div>
+            <div class="subtitle">Tecnólogo em Redes de Computadores</div>
+            <div class="contact">
+
+                <span> 🧍35 anos</span>
+                <button class="botao1" onclick="abrirWhatsApp()">
+                    📞 +55 (92) 99139-0225
+                </button>
+
+                <script>
+                    function abrirWhatsApp() {
+                        const telefone = '5592991390225'; // Apenas números
+
+                        // Detecta se é mobile ou desktop
+                        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+                        if (isMobile) {
+                            // Abre no app do WhatsApp (mobile)
+                            window.location.href = `https://api.whatsapp.com/send?phone=${telefone}`;
+                        } else {
+                            // Abre no WhatsApp Web (desktop)
+                            window.location.href = `https://web.whatsapp.com/send?phone=${telefone}`;
+                        }
+                    }
+                </script>
+
+                <button class="botao1"
+                    onclick="window.location.href='https://mail.google.com/mail/?view=cm&fs=1&to=bmvbruno20@gmail.com'">📧
+                    bmvbruno20@gmail.com</button>
+
+                <span>🌐 Rua Tobias Barreto, nº 395, Compensa</span>
+
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Coluna esquerda -->
+            <div>
+                <!-- EXPERIÊNCIA -->
+                <div class="section">
+                    <div class="section-title">EXPERIÊNCIA</div>
+                    <div class="item">
+                        <div class="item-header">
+                            <span class="item-title">Estagiário de Infraestrutura e Telecomunicações</span>
+                        </div>
+                        <div class="item-sub">Ministério Público de Amazonas - MPAM</div>
+                        <div class="item-date">📅 01/2024 – 01/2025 | 📍 Manaus</div>
+                        <div class="item-desc">
+                            <p>• Manutenção e instalação de cabeamento e equipamentos para acesso à internet.</p>
+                            <p>• Monitoramento da infraestrutura de rede.</p>
+                            <p>• Atuação para garantir conectividade, estabilidade e eficiência dos sistemas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORMAÇÃO ACADÊMICA -->
+                <div class="section">
+                    <div class="section-title">EDUCAÇÃO</div>
+                    <div class="item">
+                        <div class="item-header">
+                            <span class="item-title">Bacharel em Engenharia de Software</span>
+                        </div>
+                        <div class="item-sub">Instituto Federal do Amazonas - IFAM</div>
+                        <div class="item-date">📅 03/2021 – 01/2025 | Manaus, Brasil</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-header">
+                            <span class="item-title">Tecnólogo em Redes de Computadores</span>
+                        </div>
+                        <div class="item-sub">Universidade Paulista - UNIP</div>
+                        <div class="item-date">📅 09/2018 – 12/2020 | São Paulo, Brasil</div>
+                    </div>
+                    <div class="item">
+                        <div class="item-header">
+                            <span class="item-title">Técnico em Informática</span>
+                        </div>
+                        <div class="item-sub">Centro de Educação Tecnológica do Amazonas - CETAM</div>
+                        <div class="item-date">📅 03/2017 – 07/2019 | Manaus, Brasil</div>
+                    </div>
+                </div>
+
+                <!-- KEY ACHIEVEMENTS (traduzido ou mantido) -->
+                <div class="section">
+                    <div class="section-title">PRINCIPAIS REALIZAÇÕES</div>
+                    <div class="achievement-item">
+                        <div class="achievement-title">🔹Desenvolvimento de Interface Web</div>
+                        <div class="achievement-desc"> Desenvolvimento de interfaces web intuitivas, responsivas e de
+                            fácil compreensão, com foco na usabilidade, acessibilidade e experiência do usuário (UX).
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-title">🔹 Desenvolvimento de Banco de Dados</div>
+                        <div class="achievement-desc">Desenvolvimento de bancos de dados,
+                            incluindo modelagem relacional, criação de estruturas de dados,
+                            elaboração de consultas SQL e gerenciamento de informações,
+                            com foco em desempenho, integridade e confiabilidade dos dados.</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-title">🔹 Dispositivos Móveis</div>
+                        <div class="achievement-desc">Desenvolvimento e otimização de aplicações e interfaces voltadas
+                            para dispositivos móveis, aplicando princípios de design responsivo,
+                            usabilidade e performance, assegurando compatibilidade entre diferentes
+                            dispositivos, resoluções de tela e sistemas operacionais móveis.</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-title">🔹 Aprendizagem de Máquina e Inteligência Artificial</div>
+                        <div class="achievement-desc"> Desenvolvimento e aplicação de modelos de Machine Learning e
+                            Inteligência Artificial para análise e processamento de dados,
+                            envolvendo coleta e preparação de dados, treinamento de algoritmos,
+                            avaliação de desempenho e otimização de modelos, com foco em extração
+                            de conhecimento e criação de sistemas inteligentes.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coluna direita -->
+            <div>
+                <!-- SUMMARY / RESUMO -->
+                <div class="section">
+                    <div class="section-title">RESUMO</div>
+                    <div
+                        style="background: #f2f7fd; padding: 15px; border-radius: 10px; font-size: 0.95rem; color: #1c3b4f;">
+                        <p>Engenheiro de Software e Tecnólogo em Redes de Computadores, com experiência em
+                            infraestrutura de redes
+                            e telecomunicações e foco no desenvolvimento de software e soluções tecnológicas. Possui
+                            conhecimentos
+                            em Python, JavaScript, C#, Java e SQL, atuando no desenvolvimento de interfaces web
+                            responsivas,
+                            aplicações móveis e gerenciamento de bancos de dados. Experiência em modelagem de dados,
+                            criação de consultas SQL
+                            e desenvolvimento de sistemas com foco em usabilidade e desempenho. Possui também interesse
+                            e conhecimentos em
+                            Aprendizagem de Máquina e Inteligência Artificial para análise de dados e automação de
+                            processos. Perfil técnico
+                            analítico, versátil e orientado à inovação, qualidade e melhoria contínua de sistemas.</p>
+                    </div>
+                </div>
+
+                <!-- SKILLS -->
+                <div class="section">
+                    <div class="section-title">HABILIDADES</div>
+                    <div>
+                        <span class="skill-tag">Solução de problemas</span>
+                        <span class="skill-tag">Trabalho em equipe</span>
+                        <span class="skill-tag">Facilidade com planejamentos</span>
+                        <span class="skill-tag">Tomada de decisões</span>
+                        <span class="skill-tag">Pontualidade</span>
+                        <span class="skill-tag">Desenvolvimento Web</span>
+                        <span class="skill-tag">HTMl</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Android</span>
+                        <span class="skill-tag">Cabeamento estruturado</span>
+                        <span class="skill-tag">Monitoramento de redes</span>
+                    </div>
+                </div>
+
+                <!-- CURSOS / TREINAMENTOS (combinando as duas listas) -->
+                <div class="section">
+                    <div class="section-title">CURSOS & TREINAMENTOS</div>
+                    <div class="two-col">
+                        <div>
+                            <ul style="list-style-type: none; padding-left: 0;">
+                                <li>✔ Introdução a Redes de Computadores (Fundação Bradesco)</li>
+                                <li>✔ Segurança em TI (Fundação Bradesco)</li>
+                                <li>✔ Princípios de Machine Learning (IFAM)</li>
+                                <li>✔ Fundamentos de Aprendizado de Máquina (IFAM)</li>
+                                <li>✔ Introdução em Programação e Tecnologia WEB (IFAM)</li>
+                                <li>✔ Programação para Dispositivos Móveis (IFAM)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul style="list-style-type: none; padding-left: 0;">
+                                <li>✔ Introdução a Python para Ciência de Dados (IFAM)</li>
+                                <li>✔ Fundamentos de Aprendizado Profundo (IFAM)</li>
+                                <li>✔ Fundamentos de SQL (IFAM)</li>
+                                <li>✔ Fundamentos de Teste de Software (IFAM)</li>
+                                <li>✔ Lógica de Programação com JavaScript (IFAM)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INFORMAÇÕES ADICIONAIS (idiomas, etc.) -->
+                <div class="section">
+                    <div class="section-title">IDIOMAS</div>
+                    <div>Português: nativo | Inglês: técnico para leitura</div>
+                </div>
+            </div>
+
+            <!-- Rodapé com a marca d'água do template (opcional) -->
+            <div class="footer-note">
+
+                <button class="botao" onclick="window.location.href='index.html'">Voltar para o início</button>
+                © 2026 Dev Bruno - Todos os direitos reservados
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
