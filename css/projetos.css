@@ -9,7 +9,7 @@ body {
     background-color: #f4f7f9;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 0px;
     /*espaço na pagina */
     line-height: 1.5;
     color: #213c5a;
@@ -140,7 +140,7 @@ h1 {
 .button {
     display: flex;
     justify-content: left;
-    padding: 40px 20px;
+    padding: 40px 80px;
 }
 
 .botao {

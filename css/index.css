@@ -7,46 +7,36 @@
 
 body {
     font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    height: 100vh;
-    background-image: url(../assest/logo\ Dev\ Bruno.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 70px;
-    max-width: 70px ;
-    
-
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    padding: 0px; /*espaço na pagina */
+    line-height: 1.5;
+    color: #213c5a;
+    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
 }
 
 .resume {
-    background-color: rgba(36, 39, 56, 0.5);
+    max-width: 1400px; /* Limita a largura máxima para melhor leitura */
     width: 100%;
-    /* Ocupa toda a largura disponível * / */
-    position: absolute;
-    /* Permite posicionamento absoluto * / */
-    top: 0;
-    /* Alinha ao topo da página * / */
-    right: 0;
-    /* Alinha à direita da página * / */
-
-  
-
-
+    /*background-color: #281d4d;*/
+     background: linear-gradient(135deg, #0b2b40 0%, #123d54 100%);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+.fundo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 75vh;
+    padding: 0px;
+}
 
-.header h1 {
-  
-    font-size: 2.8rem;
-    color: white;
-    font-weight: bold;
-    letter-spacing: -0.5px;
-    margin: 20px;
-    margin-bottom: 5px;
-    line-height: 1.2;
-    flex: 1;
-    /*Ocupa o espaço disponível*/
-    text-align: center;
+.fundo .imagem{
+    width: 650px;
+    height: auto;
+   
 }
 
 .contact-redes-sociais {
@@ -54,10 +44,8 @@ body {
         
        display: flex;
        grid-auto-flow: column; /* coloca os itens um ao lado do outro */
-      /*  justify-content: center; /* centraliza o conjunto */
-       gap: 90px; /* espaço entre os itens
+       gap: 65px; /* espaço entre os itens
        justify-content: space-between; /* distribui os itens com espaço entre eles */
-      
        width: 100%;
 
         }
@@ -69,8 +57,7 @@ body {
         justify-content: right;
         align-items: right;
         margin-top: 50px;
-        gap: 20px;
-        width: 900px;
+        width: 950px;
        
     
 }
@@ -99,28 +86,33 @@ body {
 
 
 .botao {
+    /*(background: none;*/
     background: none;
     border: none;
     color: white;
-    font-size: 16px;
     cursor: pointer;
+    font-size: 22px;
     font-weight: bold;
 }
-.botao:hover {
-    color: #6d88ff;
-    text-decoration: underline;
+
+.botao:hover{
+color: #93a3ec;
+text-decoration: underline;
 }
 
-footer{
-   
+
+
+.footer-note{
+
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    margin: -100px auto;
-    text-align: center;
+    width: 100%;
     padding: 20px;
+    text-align: center;
     color: white;
-    position: absolute;
-    bottom: 0;
+     background: linear-gradient(135deg, #0b2b40 0%, #123d54 100%);
+    border: 1px solid #1b1e31;
 }
+
+

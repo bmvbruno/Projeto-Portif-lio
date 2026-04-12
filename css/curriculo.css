@@ -223,8 +223,6 @@
     /*(background: none;*/
     background: linear-gradient(135deg, #0b2b40 0% #123d54 100%);
     border: none;
-    /*font: inherit;
-    color: inherit;*/
     color: rgb(68, 64, 64);
     cursor: pointer;
     padding: 12px 24px;
