@@ -24,10 +24,15 @@ body {
     overflow: hidden;
 }
 
+
 .header {
     background: linear-gradient(135deg, #0b2b40 0%, #123d54 100%);
     color: white;
     padding: 35px 40px 25px 40px;
+    font-size: clamp(22px 5vw 42px);
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
 
 }
 
@@ -41,6 +46,7 @@ body {
 
 }
 
+
 .header h1 {
     font-size: 2.8rem;
     font-weight: bold;
@@ -49,8 +55,8 @@ body {
     line-height: 1.2;
     flex: 1;
     /*Ocupa o espaço disponível*/
-}
 
+}
 .profile-img {
     width: 120px;
     height: 120px;
@@ -72,40 +78,31 @@ body {
     padding-left: 15px;
 }
 
+/* Base responsiva com clamp() */
 .about-text {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    font-size: 1.3rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 12px 100px;
-    border-radius: 50px;
-    margin-top: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: clamp(10px, 3vw, 20px);
+    box-sizing: border-box;
 }
 
+.setion {
+    
+    border-radius: 15px;
+    padding: clamp(15px, 4vw, 30px);
+    box-sizing: border-box;
+}
 
-
-.about-text p {
-    font-style: normal;
-    font-weight: 450;
-    margin-bottom: 10px;
+.setion p {
+    
+    /*font-size: clamp(13px, 3vw, 16px);*/
+    font-size: 20px;
+    line-height: clamp(1.4, 2vw, 1.6);
+    color: rgb(5, 5, 5);
     text-align: justify;
+    margin-bottom: clamp(12px, 2vw, 20px);
 }
-
-.footer-note {
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.8rem;
-    color: #8a9aa8;
-    border-top: 1px dashed #c0d0dd;
-    padding-top: 20px;
-    margin-top: 10px;
-    padding: 8px 16px;
-
-}
-
 
 .button {
     display: flex;
@@ -114,23 +111,15 @@ body {
 }
 
 .botao {
-    /*(background: none;*/
     background: linear-gradient(135deg, #0b2b40 0% #123d54 100%);
     border: none;
-    /*font: inherit;
-    color: inherit;*/
     color: rgb(68, 64, 64);
     cursor: pointer;
     padding: 12px 24px;
     border-radius: 8px;
     font-size: 1rem;
     transition: transform 0.3s, background-color 0.3s;
-    /*text-align: left;
-    display: block;
-    margin: 0 auto;*/
 }
-
-
 
 .botao:hover {
     background: linear-gradient(135deg, #123d54 0%, #1a4d6b 100%);
@@ -140,7 +129,6 @@ body {
 }
 
 .footer-note {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,56 +141,82 @@ body {
 }
 
 
-
-
-
-
-
-@media (max-width: 700px) {
-    .main-content {
-        grid-template-columns: 1fr;
+/*Talbes*/
+@media (max-width: 768px) {
+    .header{
+        padding: 15px;
+    }
+    .header-name{
+        font-size: 15px;
+    }
+       .botao {
+        font-size: 10px;
+        padding: 12px 25px;
+        width: 60%;
+        text-align: center;
+    }
+    .footer-note{
+        padding: 15px;
+        font-size: 14px;
+        background-color: rgba(238, 238, 245, 0.8);
     }
 
-    .two-col {
-        grid-template-columns: 1fr;
-    }
 
-    .contact {
+}
+
+/*Celular*/
+@media (max-width: 480px) {
+    .header{
+        padding: 12px;
+    }
+    .header-name{
+        font-size: 14px;
+        line-height: 1.4;
+        padding: 0 10px;
+    }
+    .setion{
+        border-radius: 10px;
+    }
+    .setion p{
+        text-align: left;
+
+    }
+       .botao {
+        font-size: 10px;
+        padding: 12px 25px;
+        width: 50%;
+        text-align: center;
+    }
+    .footer-note {
+        padding: 12px 10px;
+        font-size: 12px;
         flex-direction: column;
-        gap: 10px;
-        border-radius: 20px;
-    }
-
-    .header {
-        padding: 25px;
-    }
-
-    .header h1 {
-        font-size: 2.2rem;
+        gap: 5px;
+        background-color: rgba(238, 238, 245, 0.9);
     }
 }
 
-/* Achievements cards */
-.achievement-item {
-    background: #f8fbfe;
-    padding: 12px 15px;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    border-left: 4px solid #5fa8d3;
+/* ========== CELULAR PEQUENO (360px) ========== */
+@media (max-width: 360px) {
+    .about-text {
+        padding: 8px;
+    }
+    
+    .setion {
+        padding: 15px 12px;
+    }
+    
+    .setion p {
+        font-size: 13px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+    .footer-note {
+        padding: 10px 8px;
+        font-size: 11px;
+    }
 }
 
-.achievement-title {
-    font-weight: 600;
-    color: #123d54;
-}
 
-.achievement-desc {
-    font-size: 0.9rem;
-    color: #2e4a62;
-}
 
-hr {
-    border: none;
-    border-top: 1px solid #dbe4ec;
-    margin: 10px 10px;
-}
+
