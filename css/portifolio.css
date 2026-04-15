@@ -132,6 +132,7 @@ h1 {
     display: flex;
     justify-content: left;
     padding: 40px 60px;
+    gap: 8px;
 }
 
 .botao {
@@ -152,6 +153,10 @@ h1 {
     background: linear-gradient(135deg, #123d54 0%, #1a4d6b 100%);
     color: #e9eaf0;
     text-decoration: none;
+}
+
+.botao-link{
+    padding: 12px 55px;
 }
 
 .footer-note {

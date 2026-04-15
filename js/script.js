@@ -18,3 +18,4 @@ function abrirWhatsApp() {
     window.open(url, '_blank');
 }
 
+// impressão o curriculo em pdf
