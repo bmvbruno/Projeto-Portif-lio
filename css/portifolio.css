@@ -155,9 +155,22 @@ h1 {
     text-decoration: none;
 }
 
+
 .botao-link{
     padding: 12px 55px;
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+
 }
+.botao-link:hover {
+    color: #2c48c5;
+    text-decoration: underline;
+}
+
 
 .footer-note {
 

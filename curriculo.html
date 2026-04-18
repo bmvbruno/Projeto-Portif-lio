@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo</title>
     <link rel="stylesheet" href="css/curriculo.css">
-    <link rel="icon" type="image/png" href="assest/img/logo-Dev-Bruno-2.png"/>
+    <link rel="icon" type="image/png" href="assest/img/logo-Dev-Bruno-2.png" />
     <!-- No <head> ou antes do fechamento do </body> -->
-   
+
 
 </head>
 
@@ -28,14 +28,37 @@
             <div class="contact">
 
                 <span> 🧍35 anos</span>
-                <button class="botao1" onclick="abrirWhatsApp()">
+                <button class="whatsapp-btn" onclick="abrirWhatsApp()">
                     📲 +55 (92) 99139-0225
                 </button>
                 <script src="js/script.js"></script>
 
-                <button class="botao1"
-                    onclick="window.location.href='https://mail.google.com/mail/?view=cm&fs=1&to=bmvbruno20@gmail.com'">📧
-                    bmvbruno20@gmail.com</button>
+                <!-- Link WhatsApp (aparece apenas no PDF - alternativa) -->
+                <a href="https://wa.me/5592991390225" target="_blank" class="botao1 whatsapp-pdf">
+                    📲 +55 (92) 99139-0225 (WhatsApp)
+                </a>
+
+
+
+                <!-- Email -->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bmvbruno20@gmail.com", target="_blank" class="botao1">
+                    📧 bmvbruno20@gmail.com
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/bruno-vasconcelos-5588b418a/" target="_blank" class="botao1">
+                    🔗 linkedin.com/in/bruno-vasconcelos
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/bmvbruno" target="_blank" class="botao1">
+                    🐙 github.com/bmvbruno
+                </a>
+
+                  <a href="https://bmvbruno.github.io/Projeto-Portif-lio/index.html" target="_blank" class="botao1">
+                     📁 Portifólio
+                </a>
+
 
                 <span>🌐 Rua Tobias Barreto, nº 395, Compensa</span>
 
@@ -201,23 +224,27 @@
                 </div>
             </div>
 
-           <!-- Rodapé com a marca d'água do template (opcional) -->
-            
-        
-          <div class="button">
+            <!-- Rodapé com a marca d'água do template (opcional) -->
 
-            <button class="botao" onclick="window.location.href='index.html'">Início</button>
 
-              <button class="botao" onclick="window.print()">
-    📄 Baixar como pdf
-</button>
+            <div class="button">
+
+                <button class="botao" onclick="window.location.href='index.html'">Início</button>
+
+                <!--<button class="botao" onclick="window.print()">
+                    📄 Baixar como pdf
+                </button> -->
+
+                <button class="botao" onclick="gerarPDF()">
+                    📄 Baixar Currículo em PDF
+                </button>
+
+            </div>
+
+
 
         </div>
-
-      
-     
-    </div>
-       <div class="footer-note">
+        <div class="footer-note">
 
 
             © 2026 Dev Bruno - Todos os direitos reservados

@@ -19,3 +19,7 @@ function abrirWhatsApp() {
 }
 
 // impressão o curriculo em pdf
+function gerarPDF() {
+    // Abre a janela de impressão
+    window.print();
+}

@@ -258,10 +258,16 @@ body {
     text-align: left;
 }
 
+
 .botao1:hover {
     color: #4359bb;
     text-decoration: underline;
 }
+
+
+
+
+
 .button {
     display: flex;
     justify-content: left;
@@ -424,41 +430,186 @@ hr {
     }
 }
 
-/*Estilo para impresão em pdf*/
-/* Estilos para impressão/PDF */
+/* ============================================ */
+/* ESTILOS PARA IMPRESSÃO/PDF - CORRIGIDO      */
+/* ============================================ */
+
+/* Botão WhatsApp (aparece apenas na tela) */
+.whatsapp-btn {
+    background: none;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.whatsapp-btn:hover {
+    color: #4359bb;
+    text-decoration: underline;
+}
+
+/* Links que aparecem APENAS no PDF - escondidos na página */
+.email-pdf,
+.whatsapp-pdf {
+    display: none;
+}
+
+/* ============================================ */
+/* ESTILOS PARA IMPRESSÃO/PDF - UNIFICADOS     */
+/* ============================================ */
 @media print {
-    /* Remove elementos desnecessários */
+    /* Configurações globais do PDF */
+    @page {
+        size: A4;
+        margin: 0.8cm;
+    }
+    
+    /* Reset de cores e fundos */
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 10pt;
+        line-height: 1.3;
+        color: black;
+    }
+    
+    /* Container principal */
+    .resume {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        background-color: white;
+    }
+    
+    /* Cabeçalho - ESPAÇAMENTO REDUZIDO */
+    .header {
+        background: #0b2b40 !important;
+        color: white;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        padding: 10px 15px !important;
+        margin-bottom: 5px !important;
+    }
+    
+    /* Título principal */
+    .header h1 {
+        font-size: 18pt !important;
+        margin-bottom: 5px !important;
+    }
+    
+    /* Subtítulo */
+    .header .subtitle {
+        font-size: 11pt !important;
+        margin-bottom: 5px !important;
+        padding-left: 10px !important;
+    }
+    
+    /* Contato */
+    .contact {
+        padding: 5px 10px !important;
+        margin-top: 5px !important;
+        gap: 8px !important;
+    }
+    
+    .contact span {
+        font-size: 9pt !important;
+    }
+     
+    
+ 
+
+
+    /* Seções */
+    .section {
+        margin-bottom: 8px !important;
+    }
+    
+    .section-title {
+        font-size: 12pt !important;
+        margin-bottom: 5px !important;
+        padding-bottom: 3px !important;
+    }
+    
+    /* Itens */
+    .item {
+        margin-bottom: 8px !important;
+    }
+    
+    .item-title {
+        font-size: 10pt !important;
+    }
+    
+    .item-desc {
+        font-size: 9pt !important;
+        margin-top: 3px !important;
+    }
+    
+    /* Badges e habilidades */
+    .badge, .skill-tag {
+        font-size: 8pt !important;
+        padding: 2px 8px !important;
+    }
+    
+    /* Imagens */
+    .imagem {
+        max-width: 100px !important;
+        height: auto;
+        page-break-inside: avoid;
+    }
+    
+    /* Links */
+    a {
+        text-decoration: underline;
+        color: #0366d6 !important;
+        word-break: break-all;
+    }
+    
+    /* Esconde botões desnecessários */
     .btn-pdf,
     .botao,
-    .header .contact,
     .footer-note {
         display: none !important;
     }
     
-    /* Ajusta margens */
-    body {
-        margin: 0;
-        padding: 0;
-        background: white;
+    /* Esconde o botão do WhatsApp com JavaScript */
+    .whatsapp-btn {
+        display: none !important;
     }
     
-    .resume {
-        box-shadow: none;
-        margin: 0;
-        padding: 0;
-        max-width: 100%;
+    /* Mostra os links que vão aparecer no PDF */
+    .email-pdf,
+    .whatsapp-pdf {
+        display: inline-flex !important;
+        background-color: transparent;
+        color: #0366d6;
+        text-decoration: underline;
+        padding: 10px 4px !important;
+        font-size: 9pt !important;
     }
     
-    /* Cores em preto e branco (opcional) */
-    .header {
-        background: #0b2b40 !important;
+    /* Remove fundo colorido no PDF */
+    .botao1 {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+    
+    }
+    
+    /* Ajustar textos longos */
+    p, .item-desc {
+        text-align: justify;
+        orphans: 3;
+        widows: 3;
     }
     
     /* Evita quebras de página dentro de seções */
     .section, .item {
         break-inside: avoid;
         page-break-inside: avoid;
+    }
+    
+    /* Quebras de página controladas */
+    .page-break {
+        page-break-before: always;
     }
 }
