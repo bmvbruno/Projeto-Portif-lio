@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    /*espaço na pagina */
+    line-height: 1.5;
+    color: #213c5a;
+    min-height: 100vh;
+    /* Garante que o corpo ocupe toda a altura da tela */
+}
+
+.resume {
+    max-width: 1500px;
+    /* Limita a largura máxima para melhor leitura */
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+    overflow: hidden;
+
+}
+
+.header {
+    background: linear-gradient(135deg, #0b2b40 0%, #123d54 100%);
+    color: white;
+    padding: 35px 40px 25px 40px;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    /* Tamanho responsivo do título */
+
+}
+
+.texto {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    /*padding: 20px 280px;*/
+    padding: 20px 10%;
+    border-radius: 50px;
+    margin-top: 20px;
+    /*height: 0px;*/
+    height: auto;
+
+}
+
+
+
+.texto .setion {
+
+    /*display: absolute;*/
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    text-align: justify;
+    width: 100%;
+    /*Ocupa a largura do pai */
+
+}
+
+.tecnologia {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin: 30px 0;
+  }
+
+  .Tecnologias_utilizadas,
+  .funcionalidades {
+    flex: 1;
+    min-width: 280px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  /* Título na cor roxa, alinhado à esquerda */
+  .Tecnologias_utilizadas h3,
+  .funcionalidades h3 {
+    color: black;
+    margin-bottom: 15px;
+    margin-top: 0;
+    font-size: 1.3em;
+    border-left: 4px solid #764ba2;
+    padding-left: 12px;
+    text-align: left;
+  }
+
+  /* Lista alinhada à esquerda, abaixo do título */
+  .Tecnologias_utilizadas ul,
+  .funcionalidades ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  /* Itens da lista */
+  .Tecnologias_utilizadas li,
+  .funcionalidades li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Remove a borda do último item */
+  .Tecnologias_utilizadas li:last-child,
+  .funcionalidades li:last-child {
+    border-bottom: none;
+  }
+
+  /* Responsividade: em telas pequenas, uma div vai para baixo da outra */
+  @media (max-width: 768px) {
+    .tecnologia {
+      flex-direction: column;
+    }
+  }
+
+ 
+
+.container {
+    display: flex;
+    /* espaçamento entre colunas */
+    flex-wrap: wrap;
+    /* Permite quebrar linhas no zoom */
+    gap: 30px;
+    padding: 200px;
+    /* grid-template-columns: 1fr 1fr 1fr;*/
+    /* 3 colunas de largura igual */
+    justify-content: center;
+    /*align-items: center;*/
+    align-items: flex-start;
+    /*padding-top: 80px;*/
+    padding: 40px 20px;
+
+}
+
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* espaçamento entre itens dentro da coluna */
+    align-items: center;
+    /*border-width: 2px;*/
+    align-items: center;
+    flex: 1;
+    min-height: 200px;
+
+}
+
+
+
+.imagem {
+    width: 400px;
+    height: 250px;
+    aspect-ratio: 1 / 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;   
+}
+
+.tecnologia {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+ 
+}
+.comentario{
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: justify;
+    text-align: center;
+    
+}
+
+
+.button {
+    display: flex;
+    justify-content: left;
+    padding: 40px 60px;
+    gap: 8px;
+}
+
+.botao {
+    background: linear-gradient(135deg, #0b2b40 0% #123d54 100%);
+    border: none;
+    color: rgb(68, 64, 64);
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: transform 0.3s, background-color 0.3s;
+
+}
+
+
+
+.botao:hover {
+    background: linear-gradient(135deg, #123d54 0%, #1a4d6b 100%);
+    color: #e9eaf0;
+    text-decoration: none;
+}
+
+
+.botao-link{
+    padding: 12px 55px;
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+
+}
+.botao-link:hover {
+    color: #2c48c5;
+    text-decoration: underline;
+}
+
+
+.footer-note {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: rgb(20, 20, 20);
+    background-color: rgba(238, 238, 245, 0.59);
+    border: 1px solid #ddd;
+}
+
