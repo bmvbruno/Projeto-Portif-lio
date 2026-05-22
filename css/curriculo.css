@@ -234,6 +234,30 @@ body {
     gap: 20px;
 }
 
+
+.habili_dade {
+    font-weight: 500;
+    color: #2c5777;
+    margin-bottom: 3px;
+}
+.categoria, .tecnologias, .nivel{
+    font-weight: 400;
+    color: #2c5777;
+    margin-bottom: 3px;
+}
+
+.habilidade, .descricao{
+    font-weight: 400;
+    color: #2c5777;
+    margin-bottom: 3px;
+}
+
+.lista{
+    font-weight: 400;
+    color: #2c5777;
+    margin-bottom: 3px;
+}
+
 .footer-note {
     display: flex;
     justify-content: center;
