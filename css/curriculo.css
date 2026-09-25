@@ -2,39 +2,155 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 
+:root {
+    --fundo-menu: #1e293b;
+    --fundo-menu-escuro: #1a2434;
+    --cor-destaque: #0ea5e9;
+    --cor-texto-claro: #cbd5e1;
+    --cor-texto: #e2e8f0;
+    --cor-fundo-pagina: #f8fafc;
+    --linha-ativa: #38bdf8;
+    --cor-texto-conteudo: #1e2b3a;
 }
 
 body {
     font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    background-color: #f4f7f9;
+    background-color: var(--cor-fundo-pagina);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+}
+
+/* === Menu Lateral Fixo === */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(180deg, var(--fundo-menu) 0%, var(--fundo-menu-escuro) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 25px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 100;
+}
+
+.conteudo-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-area {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.logo-menu {
+    width: 75px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.nome-dev {
+    color: var(--cor-texto);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.navegacao {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    margin-bottom: 50px;
+}
+
+.botao-menu {
+    background: none;
+    border: none;
+    color: var(--cor-texto-claro);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 14px 20px;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.botao-menu.ativo {
+    color: var(--linha-ativa);
+    border-bottom: 2px solid var(--linha-ativa);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.botao-menu:hover:not(.ativo) {
+    color: var(--cor-texto);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.redes-sociais {
     display: flex;
     justify-content: center;
-    /*padding:  40px 20px;*/
-    padding: clamp(10px, 5vw, 40px);
-    /* Responsivo: mínimo 10px, máximo 40px */
-    line-height: 1.5;
-    color: #1e2b3a;
+    gap: 18px;
+}
 
+.social-icon {
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+.social-icon:hover {
+    background-color: var(--cor-destaque);
+    transform: scale(1.1);
+}
+
+.menu-lateral .footer-note {
+    color: var(--cor-texto-claro);
+    font-size: 0.75rem;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    opacity: 0.7;
+}
+
+/* === Conteúdo Principal === */
+.conteudo-principal {
+    margin-left: 260px;
+    flex: 1;
+    padding: 20px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 .resume {
-    max-width: 1000px;
+    max-width: 1400px;
     width: 100%;
     background-color: #ffffff;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    /*border-radius: 12px;*/
-    border-radius: clamp(8px 3vw, 12px);
-    /* Borda responsiva */
+    border-radius: clamp(8px, 3vw, 12px);
     overflow: hidden;
 }
 
 .header {
     background: linear-gradient(135deg, #0b2b40 0%, #123d54 100%);
     color: white;
-    /* padding: 35px 40px 25px 40px;*/
     padding: clamp(20px, 5vw, 35px) clamp(20px, 5vw, 40px) clamp(15px, 4vw, 25px) clamp(20px, 5vw, 40px);
-
 }
 
 .header-name {
@@ -44,24 +160,18 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 10px;
-
 }
 
 .header h1 {
-    /*font-size: 2.8rem;*/
     font-size: clamp(1.5rem, 6vw, 2.8rem);
-    /* Fonte responsiva */
-    font-weight: 600;
+    font-weight: bold;
     letter-spacing: -0.5px;
-    margin-bottom: 5px;
     line-height: 1.2;
     flex: 1;
-    /*Ocupa o espaço disponível*/
-    font-weight: bold;
 }
 
 .profile-img {
-    width: clamp(80px, 15vw, 120px); /* Largura responsiva */
+    width: clamp(80px, 15vw, 120px);
     height: clamp(80px, 15vw, 120px);
     border-radius: clamp(12px, 4vw, 20px);
     object-fit: cover;
@@ -72,11 +182,10 @@ body {
 }
 
 .header .subtitle {
-    /*font-size: 1.3rem;*/
     font-size: clamp(1rem, 4vw, 1.3rem);
     font-weight: 300;
     opacity: 0.95;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-left: 4px solid #5fa8d3;
     padding-left: 15px;
 }
@@ -84,13 +193,10 @@ body {
 .contact {
     display: flex;
     flex-wrap: wrap;
-   /* gap: 25px;*/
-    gap: clamp(10px, 3vw, 2px);
-    /*font-size: 1rem;*/
+    gap: clamp(10px, 3vw, 12px);
     font-size: clamp(0.8rem, 3vw, 1rem);
     background-color: rgba(255, 255, 255, 0.1);
-    /*padding: 12px 20px;*/
-    padding:  clamp(8px, 2vw, 12px) clamp(15px, 4vw, 20px);
+    padding: clamp(8px, 2vw, 12px) clamp(15px, 4vw, 20px);
     border-radius: 50px;
     margin-top: 10px;
 }
@@ -99,22 +205,46 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    flex-wrap: wrap; /*Adicionado*/
+    flex-wrap: wrap;
 }
 
-.contact i {
-    font-style: normal;
-    font-weight: 500;
+.whatsapp-btn {
+    background: none;
+    cursor: pointer;
+    color: white;
+    border: none;
+    font: inherit;
+}
+
+.whatsapp-btn:hover {
+    color: #93a3ec;
+    text-decoration: underline;
+}
+
+.botao1 {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+}
+
+.botao1:hover {
+    color: #4359bb;
+    text-decoration: underline;
+}
+
+.whatsapp-pdf, .email-pdf {
+    display: none;
 }
 
 .main-content {
-    /*padding: 35px 40px;*/
-    padding:  clamp(20px, 5vw, 35px) clamp(20px, 5vw, 40px);
+    padding: clamp(20px, 5vw, 35px) clamp(20px, 5vw, 40px);
     display: grid;
-    /*grid-template-columns: 1fr 1fr;*/
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsivo */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: clamp(15px, 4vw, 30px);
-   /* gap: 30px;*/
 }
 
 .section {
@@ -123,7 +253,6 @@ body {
 }
 
 .section-title {
-    /*font-size: 1.3rem;*/
     font-size: clamp(1.1rem, 4vw, 1.3rem);
     font-weight: 600;
     color: #0b2b40;
@@ -140,19 +269,16 @@ body {
 
 .item-header {
     display: flex;
-    flex-wrap: wrap; /* Permite quebrar linha */
+    flex-wrap: wrap;
     justify-content: space-between;
-
     align-items: baseline;
     gap: 10px;
-
     font-weight: 600;
     color: #1e3b4f;
     margin-bottom: 5px;
 }
 
 .item-title {
-    /*font-size: 1.1rem;*/
     font-size: clamp(0.95rem, 3.5vw, 1.1rem);
 }
 
@@ -162,14 +288,10 @@ body {
     margin-bottom: 3px;
 }
 
-.item-date,
-.item-location {
+.item-date {
     font-weight: 400;
     color: #5f6b7a;
-    /*font-size: 0.9rem;*/
-
     font-size: clamp(0.75rem, 2.5vw, 0.9rem);
-
     display: flex;
     align-items: center;
     gap: 4px;
@@ -179,10 +301,7 @@ body {
     margin-top: 8px;
     padding-left: 10px;
     border-left: 2px solid #d0dee9;
-    /*font-size: 0.95rem;*/
-
     font-size: clamp(0.85rem, 3vw, 0.95rem);
-
     color: #2c3e50;
 }
 
@@ -190,144 +309,85 @@ body {
     margin-bottom: 6px;
 }
 
-.badge-list {
-    display: flex;
-    flex-wrap: wrap;
-   /* gap: 12px;*/
-
-   gap: clamp(8px, 2vw, 12px);
-
-    margin-top: 10px;
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
 }
 
-.badge {
-    background-color: #e7f0f9;
-    color: #0b2b40;
-    /* padding: 5px 15px;*/
-     padding: 5px clamp(10px, 2vw, 15px); /*Inserido*/
-
-    border-radius: 30px;
-
-     font-size: clamp(0.75rem, 2.5vw, 0.9rem); /*Inserido*/
-
-    /*font-size: 0.9rem;*/
-    font-weight: 500;
-    border: 1px solid #bcd3e6;
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.skill-tag {
-    background-color: #eef3f8;
+th, td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tecno-tag {
     display: inline-block;
-   /* padding: 5px 12px;*/
-    border-radius: 20px;
-    padding: 5px clamp(8px, 2vw, 12px);
-    /*font-size: 0.9rem;*/
-     font-size: clamp(0.75rem, 2.5vw, 0.9rem);
-    margin: 0 5px 8px 0;
+    background-color: #eef3f8;
     border: 1px solid #cbdbe9;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 0 5px 6px 0;
+    font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+}
+
+.nivel-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.nivel-intermediario-avancado {
+    background-color: #e7f3ff;
+    color: #0b5ed7;
+}
+
+.nivel-intermediario {
+    background-color: #fff3cd;
+    color: #92400e;
+}
+
+.nivel-basico-intermediario {
+    background-color: #d1e7dd;
+    color: #0f5132;
 }
 
 .two-col {
     display: grid;
-    /*grid-template-columns: 1fr 1fr;*/
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
+.lista ul {
+    list-style: none;
+}
 
-.habili_dade {
-    font-weight: 500;
+.lista li {
+    margin-bottom: 8px;
     color: #2c5777;
-    margin-bottom: 3px;
 }
-.categoria, .tecnologias, .nivel{
-    font-weight: 400;
+
+.habilidade, .descricao {
     color: #2c5777;
-    margin-bottom: 3px;
 }
 
-.habilidade, .descricao{
-    font-weight: 400;
-    color: #2c5777;
-    margin-bottom: 3px;
-}
-
-.lista{
-    font-weight: 400;
-    color: #2c5777;
-    margin-bottom: 3px;
-}
-
-.footer-note {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    color: rgb(20, 20, 20);
-    background-color: rgba(238, 238, 245, 0.59);
-    
-}
-
-
-
-.botao1 {
-    background: none;
-    border: none;
-    padding: 8px 16px;
-    font: inherit;
-    color: inherit;
-    cursor: pointer;
-    text-align: left;
-}
-
-
-.botao1:hover {
-    color: #4359bb;
-    text-decoration: underline;
-}
-
-
-
-
-
-.button {
-    display: flex;
-    justify-content: left;
-    padding: 5px 5px;
-    gap: 8px;
-}
-.botao {
-    /*(background: none;*/
-    background: linear-gradient(135deg, #0b2b40 0% #123d54 100%);
-    border: none;
-    color: rgb(68, 64, 64);
-    cursor: pointer;
-   /* padding: 12px 24px;*/
-    padding: clamp(10px, 2vw, 12px) clamp(16px, 4vw, 24px);
-    border-radius: 8px;
-    /*font-size: 1rem;*/
-    font-size: clamp(0.85rem, 3vw, 1rem);
-    transition: transform 0.3s, background-color 0.3s;
-    width: auto;
+.habi-tag {
     display: inline-block;
+    background-color: #f0f4f8;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
 }
 
-.botao:hover {
-    background: linear-gradient(135deg, #123d54 0%, #1a4d6b 100%);
-    color: #e9eaf0;
-    /* text-decoration: underline; */
-    text-decoration: none;
-    transform: scale(1.02);
-}
-
-
-/* Achievements cards */
 .achievement-item {
     background: #f8fbfe;
-/* padding: 12px 15px;*/
-     padding: clamp(10px, 3vw, 12px) clamp(12px, 3vw, 15px);
+    padding: clamp(10px, 3vw, 12px) clamp(12px, 3vw, 15px);
     border-radius: 10px;
     margin-bottom: 12px;
     border-left: 4px solid #5fa8d3;
@@ -336,34 +396,124 @@ body {
 .achievement-title {
     font-weight: 600;
     color: #123d54;
-     font-size: clamp(0.9rem, 3vw, 1rem);
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    margin-bottom: 5px;
 }
 
 .achievement-desc {
-    /*font-size: 0.9rem;*/
     font-size: clamp(0.8rem, 2.5vw, 0.9rem);
     color: #2e4a62;
 }
 
-
-hr {
+.botao-link {
+    background: none;
     border: none;
-    border-top: 1px solid #dbe4ec;
-    margin: 10px 0;
+    color: #0b5ed7;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    font: inherit;
 }
 
-/* Media Queries adicionais para melhor responsividade */
-@media (max-width: 700px) {
-    /*.main-content {
-        grid-template-columns: 1fr;
-      
-    }*/
+.botao-link:hover {
+    color: #0a4bbd;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    padding: 25px 40px;
+    gap: 12px;
+}
+
+.botao {
+    background: linear-gradient(135deg, #0b2b40 0%, #123d54 100%);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: clamp(10px, 2vw, 12px) clamp(16px, 4vw, 24px);
+    border-radius: 8px;
+    font-size: clamp(0.85rem, 3vw, 1rem);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.botao:hover {
+    background: linear-gradient(135deg, #123d54 0%, #1a4d6b 100%);
+    transform: scale(1.02);
+}
+
+/* === Responsividade === */
+@media (max-width: 768px) {
+    .menu-lateral {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 25px 20px;
+    }
+
+    .conteudo-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .logo-area {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .logo-menu {
+        width: 50px;
+        margin-bottom: 0;
+    }
+
+    .nome-dev {
+        font-size: 1.1rem;
+    }
+
+    .navegacao {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        margin: 10px 0;
+    }
+
+    .botao-menu {
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+
+    .redes-sociais {
+        gap: 12px;
+    }
+
+    .social-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .menu-lateral .footer-note {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .conteudo-principal {
+        margin-left: 0;
+        padding: 20px 15px;
+    }
+
     .header-name {
         flex-direction: column;
         text-align: center;
     }
+
     .header h1 {
-        /*font-size: 2.2rem;*/
         text-align: center;
     }
 
@@ -371,15 +521,8 @@ hr {
         position: static;
         margin: 0 auto;
     }
-     .contact {
-        justify-content: center;
-        text-align: center;
-    }
-    .contact span {
-        justify-content: center;
-    }
-   
-        .header .subtitle {
+
+    .header .subtitle {
         text-align: center;
         border-left: none;
         border-top: 4px solid #5fa8d3;
@@ -387,107 +530,44 @@ hr {
         padding-left: 0;
     }
 
-     .item-header {
-        flex-direction: column;
-        gap: 5px;
-    }
-    /*
-    .footer-note {
-        flex-direction: column;
+    .contact {
+        justify-content: center;
         text-align: center;
     }
-    */
-     .footer-note{
-        padding: 15px;
-        font-size: 14px;
-        background-color: rgba(238, 238, 245, 0.8);
+
+    .button {
+        justify-content: center;
+        padding: 20px;
     }
-    
 }
 
-
 @media (max-width: 480px) {
-    body {
-        padding: 10px;
+    .botao-menu {
+        font-size: 0.85rem;
+        padding: 8px 10px;
     }
-    
+
+    .social-icon {
+        width: 32px;
+        height: 32px;
+    }
+
     .main-content {
         padding: 20px 15px;
     }
-    
-    .badge-list {
-        justify-content: center;
-    }
-    
-    .skill-tag {
-        font-size: 0.75rem;
-    }
-    
-    .two-col {
-        grid-template-columns: 1fr;
-    }
-     .footer-note {
-        padding: 12px 10px;
-        font-size: 12px;
-        flex-direction: column;
-        gap: 5px;
-        background-color: rgba(238, 238, 245, 0.9);
+
+    .contact {
+        gap: 8px;
     }
 }
 
-/* Para telas muito grandes (acima de 1400px) */
-@media (min-width: 1400px) {
-    .resume {
-        max-width: 1400px;
-    }
-    
-    .main-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Melhora acessibilidade para zoom */
-@media (max-width: 300px) {
-    .contact span {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* ============================================ */
-/* ESTILOS PARA IMPRESSÃO/PDF - CORRIGIDO      */
-/* ============================================ */
-
-/* Botão WhatsApp (aparece apenas na tela) */
-.whatsapp-btn {
-    background: none;
-    cursor: pointer;
-    color: white;
-    border: none;
-}
-
-.whatsapp-btn:hover {
-    color: #4359bb;
-    text-decoration: underline;
-}
-
-/* Links que aparecem APENAS no PDF - escondidos na página */
-.email-pdf,
-.whatsapp-pdf {
-    display: none;
-}
-
-/* ============================================ */
-/* ESTILOS PARA IMPRESSÃO/PDF - UNIFICADOS     */
-/* ============================================ */
+/* === Impressão/PDF === */
 @media print {
-    /* Configurações globais do PDF */
     @page {
         size: A4;
         margin: 0.8cm;
     }
-    
-    /* Reset de cores e fundos */
+
     body {
         background-color: white;
         margin: 0;
@@ -496,144 +576,40 @@ hr {
         line-height: 1.3;
         color: black;
     }
-    
-    /* Container principal */
+
+    .menu-lateral {
+        display: none !important;
+    }
+
+    .conteudo-principal {
+        margin-left: 0;
+        padding: 0;
+    }
+
     .resume {
         max-width: 100%;
         margin: 0;
-        padding: 0;
         box-shadow: none;
-        background-color: white;
     }
-    
-    /* Cabeçalho - ESPAÇAMENTO REDUZIDO */
+
     .header {
         background: #0b2b40 !important;
         color: white;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-        padding: 10px 15px !important;
-        margin-bottom: 5px !important;
+        padding: 15px !important;
     }
-    
-    /* Título principal */
-    .header h1 {
-        font-size: 18pt !important;
-        margin-bottom: 5px !important;
-    }
-    
-    /* Subtítulo */
-    .header .subtitle {
-        font-size: 11pt !important;
-        margin-bottom: 5px !important;
-        padding-left: 10px !important;
-    }
-    
-    /* Contato */
-    .contact {
-        padding: 5px 10px !important;
-        margin-top: 5px !important;
-        gap: 8px !important;
-    }
-    
-    .contact span {
-        font-size: 9pt !important;
-    }
-     
-    
- 
 
-
-    /* Seções */
-    .section {
-        margin-bottom: 8px !important;
-    }
-    
-    .section-title {
-        font-size: 12pt !important;
-        margin-bottom: 5px !important;
-        padding-bottom: 3px !important;
-    }
-    
-    /* Itens */
-    .item {
-        margin-bottom: 8px !important;
-    }
-    
-    .item-title {
-        font-size: 10pt !important;
-    }
-    
-    .item-desc {
-        font-size: 9pt !important;
-        margin-top: 3px !important;
-    }
-    
-    /* Badges e habilidades */
-    .badge, .skill-tag {
-        font-size: 8pt !important;
-        padding: 2px 8px !important;
-    }
-    
-    /* Imagens */
-    .imagem {
-        max-width: 100px !important;
-        height: auto;
-        page-break-inside: avoid;
-    }
-    
-    /* Links */
-    a {
-        text-decoration: underline;
-        color: #0366d6 !important;
-        word-break: break-all;
-    }
-    
-    /* Esconde botões desnecessários */
-    .btn-pdf,
-    .botao,
-    .footer-note {
+    .whatsapp-btn, .button .botao:first-child {
         display: none !important;
     }
-    
-    /* Esconde o botão do WhatsApp com JavaScript */
-    .whatsapp-btn {
-        display: none !important;
-    }
-    
-    /* Mostra os links que vão aparecer no PDF */
-    .email-pdf,
-    .whatsapp-pdf {
+
+    .whatsapp-pdf, .email-pdf {
         display: inline-flex !important;
-        background-color: transparent;
         color: #0366d6;
-        text-decoration: underline;
-        padding: 10px 4px !important;
-        font-size: 9pt !important;
     }
-    
-    /* Remove fundo colorido no PDF */
-    .botao1 {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    
-    }
-    
-    /* Ajustar textos longos */
-    p, .item-desc {
-        text-align: justify;
-        orphans: 3;
-        widows: 3;
-    }
-    
-    /* Evita quebras de página dentro de seções */
-    .section, .item {
-        break-inside: avoid;
-        page-break-inside: avoid;
-    }
-    
-    /* Quebras de página controladas */
-    .page-break {
-        page-break-before: always;
+
+    .menu-lateral .footer-note {
+        display: none !important;
     }
 }

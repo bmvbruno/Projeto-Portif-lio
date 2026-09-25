@@ -1,449 +1,404 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo</title>
+    <title>Currículo | Dev-Bruno</title>
     <link rel="stylesheet" href="css/curriculo.css">
-    <link rel="icon" type="image/png" href="assest/img/logo-Dev-Bruno-2.png" />
-    <!-- No <head> ou antes do fechamento do </body> -->
-
-
+    <link rel="icon" type="image/png" href="assest/img/logo-Dev-Bruno3.png" />
 </head>
-
 <body>
-    <div class="resume">
-        <div class="header">
-
-            <div class="header-name">
-                <h1>BRUNO MARQUES DE VASCONCELOS</h1>
-                <!-- Foto de perfil inserido por mim, Bruno-->
-                <img src="assest/img/Bruno2.jpeg" alt="Foto de Bruno" class="profile-img">
+    <!-- Menu Fixo Lateral -->
+    <aside class="menu-lateral">
+        <div class="conteudo-menu">
+            <div class="logo-area">
+                <img src="assest/img/logo-Dev-Bruno3.png" alt="Logo Dev-Bruno" class="logo-menu" />
+                <h1 class="nome-dev">DEV BRUNO</h1>
             </div>
 
+            <nav class="navegacao">
+                <a href="index.html" class="botao-menu">Página Inicial</a>
+                <a href="sobre.html" class="botao-menu">Sobre</a>
+                <a href="curriculo.html" class="botao-menu ativo">Currículo</a>
+                <a href="tecnologiasutilizadas.html" class="botao-menu">Tecnologias Utilizadas</a>
+                <a href="projetos.html" class="botao-menu">Projetos</a>
+            </nav>
 
-            <div class="subtitle">Bacharel em Engenharia de Software</div>
-            <div class="subtitle">Desenvolvedor Full Stack</div>
-            <div class="contact">
-
-                <span> 🧍35 anos</span>
-                <button class="whatsapp-btn" onclick="abrirWhatsApp()">
-                    📲 +55 (92) 99139-0225
-                </button>
-                <script src="js/script.js"></script>
-
-                <!-- Link WhatsApp (aparece apenas no PDF - alternativa) -->
-                <a href="https://wa.me/5592991390225" target="_blank" class="botao1 whatsapp-pdf">
-                    📲 +55 (92) 99139-0225 (WhatsApp)
+            <div class="redes-sociais">
+                <a href="https://www.facebook.com/bruno.vasconcelos.50951" target="_blank">
+                    <img src="assest/img/icons8-facebook-logo-94.png" alt="Facebook" class="social-icon" />
                 </a>
-
-
-
-                <!-- Email -->
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bmvbruno20@gmail.com" , target="_blank"
-                    class="botao1">
-                    📧 bmvbruno20@gmail.com
+                <a href="https://www.instagram.com/bruno.m.vasconcelos/" target="_blank">
+                    <img src="assest/img/icons8-instagram-logo-94.png" alt="Instagram" class="social-icon" />
                 </a>
-
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/bruno-vasconcelos-5588b418a/" target="_blank" class="botao1">
-                    🔗 linkedin.com/in/bruno-vasconcelos
+                <a href="https://www.linkedin.com/in/bruno-vasconcelos-5588b418a/" target="_blank">
+                    <img src="assest/img/icons8-linkedin-48.png" alt="LinkedIn" class="social-icon" />
                 </a>
-
-                <!-- GitHub -->
-                <a href="https://github.com/bmvbruno" target="_blank" class="botao1">
-                    🐙 github.com/bmvbruno
+                <a href="https://github.com/bmvbruno" target="_blank">
+                    <img src="assest/img/icons8-github-94.png" alt="GitHub" class="social-icon" />
                 </a>
-
-                <a href="https://bmvbruno.github.io/Projeto-Portif-lio/index.html" target="_blank" class="botao1">
-                    📁 Portfólio
-                </a>
-
-
-                <span>🌐 Rua Tobias Barreto, nº 395, Compensa</span>
-
             </div>
         </div>
 
-        <div class="main-content">
-            <!-- Coluna esquerda -->
-            <div>
-                <!-- EXPERIÊNCIA -->
-                <div class="section">
-                    <div class="section-title">EXPERIÊNCIA</div>
-                    <div class="item">
-                        <div class="item-header">
-                            <span class="item-title">Estagiário de Infraestrutura e Telecomunicações</span>
-                        </div>
-                        <div class="item-sub">Ministério Público de Amazonas - MPAM</div>
-                        <div class="item-date">📅 01/2024 – 01/2025 | 📍 Manaus</div>
-                        <div class="item-desc">
-                            <p>• Manutenção de infraestrutura atendendo mais de 200 usuários.</p>
-                            <p>• Redução de downtime através do monitoramento da infraestrutura de rede.</p>
-                            <p>• Atuação para garantir conectividade, estabilidade e eficiência dos sistemas.</p>
-                        </div>
-                    </div>
+        <footer class="footer-note">
+            © 2026 Dev Bruno - Todos os direitos reservados
+        </footer>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="conteudo-principal">
+        <div class="resume">
+            <div class="header">
+                <div class="header-name">
+                    <h1>BRUNO MARQUES DE VASCONCELOS</h1>
+                    <img src="assest/img/Bruno2.jpeg" alt="Foto de Bruno" class="profile-img">
                 </div>
-
-                <!-- FORMAÇÃO ACADÊMICA -->
-                <div class="section">
-                    <div class="section-title">EDUCAÇÃO</div>
-                    <div class="item">
-                        <div class="item-header">
-                            <span class="item-title">Bacharel em Engenharia de Software</span>
-                        </div>
-                        <div class="item-sub">Instituto Federal do Amazonas - IFAM</div>
-                        <div class="item-date">📅 03/2021 – 01/2025 | Manaus, Brasil</div>
-                    </div>
-                    <div class="item">
-                        <div class="item-header">
-                            <span class="item-title">Tecnólogo em Redes de Computadores</span>
-                        </div>
-                        <div class="item-sub">Universidade Paulista - UNIP</div>
-                        <div class="item-date">📅 09/2018 – 12/2020 | São Paulo, Brasil</div>
-                    </div>
-                    <div class="item">
-                        <div class="item-header">
-                            <span class="item-title">Técnico em Informática</span>
-                        </div>
-                        <div class="item-sub">Centro de Educação Tecnológica do Amazonas - CETAM</div>
-                        <div class="item-date">📅 03/2017 – 07/2019 | Manaus, Brasil</div>
-                    </div>
-                </div>
-
-                <!-- SUMMARY / RESUMO -->
-                <div class="section">
-                    <div class="section-title">RESUMO</div>
-                    <div
-                        style="background: #f2f7fd; padding: 15px; border-radius: 10px; font-size: 0.95rem; color: #1c3b4f;">
-                        <p>Engenheiro de Software e Tecnólogo em Redes de Computadores com experiência em infraestrutura
-                            de redes e
-                            desenvolvimento full stack. Atualmente focado na criação de sistemas web completos, com
-                            domínio em Node.js, Express, MySQL, JavaScript, HTML5 e CSS3.
-                            Destaque para o desenvolvimento do Sistema de Gestão de Condomínio - projeto full stack com
-                            autenticação, controle de permissões por perfil (Admin/Porteiro),
-                            dashboard com gráficos e CRUD completo.
-                            Possui também conhecimentos em Python, Machine Learning e IA para análise de dados. Perfil
-                            analítico, versátil e orientado à inovação e qualidade.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- SKILLS -->
-                <div class="section">
-                    <div class="section-title">HABILIDADES TÉCNICAS</div>
-                    <div class="tabela-container">
-                        <div class="tabela-header">
-                         <div class="item-sub ">Engenheiro de Software | Desenvolvedor Full Stack</div>
-                            
-                        </div>
-
-                        <table>
-                            <thead>
-                                <tr class="habili_dade">
-                                    <th>Categoria</th>
-                                    <th>Tecnologias</th>
-                                    <th>Nível</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="categoria">Linguagens</td>
-                                    <td class="tecnologias">
-                                        <span class="tecno-tag">JavaScript</span>
-                                        <span class="tecno-tag">SQL</span>
-                                        <span class="tecno-tag">Python</span>
-                                        <span class="tecno-tag">Java</span>
-                                        <span class="tecno-tag">C#</span>
-                                    </td>
-                                    <td class="nivel">
-                                        <span
-                                            class="nivel-badge nivel-intermediario-avancado">Intermediário-Avançado</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="categoria"> Backend</td>
-                                    <td class="tecnologias">
-                                        <span class="tecno-tag">Node.js</span>
-                                        <span class="tecno-tag">Express</span>
-                                        <span class="tecno-tag">bcrypt</span>
-                                    </td>
-                                    <td class="nivel">
-                                        <span class="nivel-badge nivel-intermediario">Intermediário</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="categoria"> Frontend</td>
-                                    <td class="tecnologias">
-                                        <span class="tecno-tag">HTML5</span>
-                                        <span class="tecno-tag">CSS3</span>
-                                        <span class="tecno-tag">JavaScript</span>
-                                    </td>
-                                    <td class="nivel">
-                                        <span
-                                            class="nivel-badge nivel-intermediario-avancado">Intermediário-Avançado</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="categoria"> Banco de Dados</td>
-                                    <td class="tecnologias">
-                                        <span class="tecno-tag">MySQL</span>
-                                        <span class="tecno-tag">Modelagem relacional</span>
-                                        <span class="tecno-tag">Consultas SQL</span>
-                                    </td>
-                                    <td class="nivel">
-                                        <span
-                                            class="nivel-badge nivel-intermediario-avancado">Intermediário-Avançado</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="categoria"> Ferramentas</td>
-                                    <td class="tecnologias">
-                                        <span class="tecno-tag">Git</span>
-                                        <span class="tecno-tag">GitHub</span>
-                                        <span class="tecno-tag">XAMPP</span>
-                                        <span class="tecno-tag">VSCode</span>
-                                        <span class="tecno-tag">phpMyAdmin</span>
-                                    </td>
-                                    <td class="nivel">
-                                        <span class="nivel-badge nivel-intermediario">Intermediário</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="categoria"> Infraestrutura</td>
-                                    <td class="tecnologias">
-                                        <span class="tecno-tag">Cabeamento estruturado</span>
-                                        <span class="tecno-tag">Monitoramento de redes</span>
-                                    </td>
-                                    <td class="nivel">
-                                        <span class="nivel-badge nivel-intermediario">Intermediário</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="categoria"> Interesse</td>
-                                    <td class="tecnologias">
-                                        <span class="tecno-tag">Machine Learning</span>
-                                        <span class="tecno-tag">Inteligência Artificial</span>
-                                        <span class="tecno-tag">Ciência de Dados</span>
-                                    </td>
-                                    <td class="nivel">
-                                        <span class="nivel-badge nivel-basico-intermediario">Básico-Intermediário</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-
-                    </div>
-
-                </div>
-
-                <!-- KEY ACHIEVEMENTS (traduzido ou mantido) -->
-                <div class="section">
-                    <div class="section-title">PRINCIPAIS REALIZAÇÕES</div>
-                    <div class="achievement-item">
-                        <div class="achievement-title">🔹Sistema de Gestão de condomínio (Full Stack)</div>
-                        <div class="achievement-desc"> Desenvolvimento completo de sistema web com autenticação, CRUD e
-                            dashboard com gráficos.
-                            Tecnologias: Node.js, Express, MySQL, bcrypt, Chart.js
-                        </div>
-                    </div>
-                    <div class="achievement-item">
-                        <div class="achievement-title">🔹 Desenvolvimento API RESTful</div>
-                        <div class="achievement-desc">Criação de API com rotas protegidas,
-                            criptografia de senhas e integração com frontend.</div>
-                    </div>
-                    <div class="achievement-item">
-                        <div class="achievement-title">🔹 Dashboard interativo</div>
-                        <div class="achievement-desc">Implementação de gráficos dinâmicos
-                            com Chart.js para visualização de dados em tempo real.</div>
-                    </div>
-                    <div class="achievement-item">
-                        <div class="achievement-title">🔹 Desenvolvimento de Banco de Dados</div>
-                        <div class="achievement-desc"> Desenvolvimento de bancos de dados, incluindo modelagem
-                            relacional,
-                            criação de estruturas de dados, elaboração de consultas SQL e gerenciamento de informações,
-                            com foco em desempenho, integridade e confiabilidade dos dados. </div>
-                    </div>
+                <div class="subtitle">Bacharel em Engenharia de Software</div>
+                <div class="subtitle">Desenvolvedor Full Stack</div>
+                <div class="contact">
+                    <span> 🧍35 anos</span>
+                    <button class="whatsapp-btn" onclick="abrirWhatsApp()">
+                        📲 +55 (92) 99139-0225
+                    </button>
+                    <script src="js/script.js"></script>
+                    <a href="https://wa.me/5592991390225" target="_blank" class="botao1 whatsapp-pdf">
+                        📲 +55 (92) 99139-0225 (WhatsApp)
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bmvbruno20@gmail.com" target="_blank" class="botao1">
+                        📧 bmvbruno20@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/bruno-vasconcelos-5588b418a/" target="_blank" class="botao1">
+                        🔗 linkedin.com/in/bruno-vasconcelos
+                    </a>
+                    <a href="https://github.com/bmvbruno" target="_blank" class="botao1">
+                        🐙 github.com/bmvbruno
+                    </a>
+                    <a href="https://bmvbruno.github.io/Projeto-Portif-lio/index.html" target="_blank" class="botao1">
+                        📁 Portfólio
+                    </a>
+                    <span>🌐 Rua Tobias Barreto, nº 395, Compensa</span>
                 </div>
             </div>
 
-            <!-- Coluna direita -->
-            <div>
-                <!-- SUMMARY / RESUMO -->
-                <!-- CURSOS / TREINAMENTOS (combinando as duas listas) -->
-                <div class="section">
-                    <div class="section-title">PROJETOS EM DESTAQUE</div>
-                    <div class="two-col">
-                        <div>
-                            <div class="item-sub">Sistema de Gestão de Condomínio (Full Stack)</div>
-                             <div class="item-sub">Tecnologias: Node.js, Express, MySQL, bcrypt, HTML5, CSS3, JavaScript, Chart.js</div>
-                            
+            <div class="main-content">
+                <!-- Coluna esquerda -->
+                <div>
+                    <!-- EXPERIÊNCIA -->
+                    <div class="section">
+                        <div class="section-title">EXPERIÊNCIA</div>
+                        <div class="item">
+                            <div class="item-header">
+                                <span class="item-title">Estagiário de Infraestrutura e Telecomunicações</span>
+                            </div>
+                            <div class="item-sub">Ministério Público de Amazonas - MPAM</div>
+                            <div class="item-date">📅 01/2024 – 01/2025 | 📍 Manaus</div>
+                            <div class="item-desc">
+                                <p>• Manutenção de infraestrutura atendendo mais de 200 usuários.</p>
+                                <p>• Redução de downtime através do monitoramento da infraestrutura de rede.</p>
+                                <p>• Atuação para garantir conectividade, estabilidade e eficiência dos sistemas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FORMAÇÃO ACADÊMICA -->
+                    <div class="section">
+                        <div class="section-title">EDUCAÇÃO</div>
+                        <div class="item">
+                            <div class="item-header">
+                                <span class="item-title">Bacharel em Engenharia de Software</span>
+                            </div>
+                            <div class="item-sub">Instituto Federal do Amazonas - IFAM</div>
+                            <div class="item-date">📅 03/2021 – 01/2025 | Manaus, Brasil</div>
+                        </div>
+                        <div class="item">
+                            <div class="item-header">
+                                <span class="item-title">Tecnólogo em Redes de Computadores</span>
+                            </div>
+                            <div class="item-sub">Universidade Paulista - UNIP</div>
+                            <div class="item-date">📅 09/2018 – 12/2020 | São Paulo, Brasil</div>
+                        </div>
+                        <div class="item">
+                            <div class="item-header">
+                                <span class="item-title">Técnico em Informática</span>
+                            </div>
+                            <div class="item-sub">Centro de Educação Tecnológica do Amazonas - CETAM</div>
+                            <div class="item-date">📅 03/2017 – 07/2019 | Manaus, Brasil</div>
+                        </div>
+                    </div>
+
+                    <!-- RESUMO -->
+                    <div class="section">
+                        <div class="section-title">RESUMO</div>
+                        <div style="background: #f2f7fd; padding: 15px; border-radius: 10px; font-size: 0.95rem; color: #1c3b4f;">
+                            <p>Engenheiro de Software e Tecnólogo em Redes de Computadores com experiência em infraestrutura
+                                de redes e
+                                desenvolvimento full stack. Atualmente focado na criação de sistemas web completos, com
+                                domínio em Node.js, Express, MySQL, JavaScript, HTML5 e CSS3.
+                                Destaque para o desenvolvimento do Sistema de Gestão de Condomínio - projeto full stack com
+                                autenticação, controle de permissões por perfil (Admin/Porteiro),
+                                dashboard com gráficos e CRUD completo.
+                                Possui também conhecimentos em Python, Machine Learning e IA para análise de dados. Perfil
+                                analítico, versátil e orientado à inovação e qualidade.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- HABILIDADES -->
+                    <div class="section">
+                        <div class="section-title">HABILIDADES TÉCNICAS</div>
+                        <div class="tabela-container">
+                            <div class="tabela-header">
+                                <div class="item-sub">Engenheiro de Software | Desenvolvedor Full Stack</div>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr class="habili_dade">
+                                        <th>Categoria</th>
+                                        <th>Tecnologias</th>
+                                        <th>Nível</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="categoria">Linguagens</td>
+                                        <td class="tecnologias">
+                                            <span class="tecno-tag">JavaScript</span>
+                                            <span class="tecno-tag">SQL</span>
+                                            <span class="tecno-tag">Python</span>
+                                            <span class="tecno-tag">Java</span>
+                                            <span class="tecno-tag">C#</span>
+                                        </td>
+                                        <td class="nivel">
+                                            <span class="nivel-badge nivel-intermediario-avancado">Intermediário-Avançado</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="categoria">Backend</td>
+                                        <td class="tecnologias">
+                                            <span class="tecno-tag">Node.js</span>
+                                            <span class="tecno-tag">Express</span>
+                                            <span class="tecno-tag">bcrypt</span>
+                                        </td>
+                                        <td class="nivel">
+                                            <span class="nivel-badge nivel-intermediario">Intermediário</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="categoria">Frontend</td>
+                                        <td class="tecnologias">
+                                            <span class="tecno-tag">HTML5</span>
+                                            <span class="tecno-tag">CSS3</span>
+                                            <span class="tecno-tag">JavaScript</span>
+                                        </td>
+                                        <td class="nivel">
+                                            <span class="nivel-badge nivel-intermediario-avancado">Intermediário-Avançado</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="categoria">Banco de Dados</td>
+                                        <td class="tecnologias">
+                                            <span class="tecno-tag">MySQL</span>
+                                            <span class="tecno-tag">Modelagem relacional</span>
+                                            <span class="tecno-tag">Consultas SQL</span>
+                                        </td>
+                                        <td class="nivel">
+                                            <span class="nivel-badge nivel-intermediario-avancado">Intermediário-Avançado</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="categoria">Ferramentas</td>
+                                        <td class="tecnologias">
+                                            <span class="tecno-tag">Git</span>
+                                            <span class="tecno-tag">GitHub</span>
+                                            <span class="tecno-tag">XAMPP</span>
+                                            <span class="tecno-tag">VSCode</span>
+                                            <span class="tecno-tag">phpMyAdmin</span>
+                                        </td>
+                                        <td class="nivel">
+                                            <span class="nivel-badge nivel-intermediario">Intermediário</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="categoria">Infraestrutura</td>
+                                        <td class="tecnologias">
+                                            <span class="tecno-tag">Cabeamento estruturado</span>
+                                            <span class="tecno-tag">Monitoramento de redes</span>
+                                        </td>
+                                        <td class="nivel">
+                                            <span class="nivel-badge nivel-intermediario">Intermediário</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="categoria">Interesse</td>
+                                        <td class="tecnologias">
+                                            <span class="tecno-tag">Machine Learning</span>
+                                            <span class="tecno-tag">Inteligência Artificial</span>
+                                            <span class="tecno-tag">Ciência de Dados</span>
+                                        </td>
+                                        <td class="nivel">
+                                            <span class="nivel-badge nivel-basico-intermediario">Básico-Intermediário</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- REALIZAÇÕES -->
+                    <div class="section">
+                        <div class="section-title">PRINCIPAIS REALIZAÇÕES</div>
+                        <div class="achievement-item">
+                            <div class="achievement-title">🔹 Sistema de Gestão de Condomínio (Full Stack)</div>
+                            <div class="achievement-desc">Desenvolvimento completo de sistema web com autenticação, CRUD e
+                                dashboard com gráficos.
+                                Tecnologias: Node.js, Express, MySQL, bcrypt, Chart.js
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-title">🔹 Desenvolvimento API RESTful</div>
+                            <div class="achievement-desc">Criação de API com rotas protegidas,
+                                criptografia de senhas e integração com frontend.</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-title">🔹 Dashboard interativo</div>
+                            <div class="achievement-desc">Implementação de gráficos dinâmicos
+                                com Chart.js para visualização de dados em tempo real.</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-title">🔹 Desenvolvimento de Banco de Dados</div>
+                            <div class="achievement-desc">Desenvolvimento de bancos de dados, incluindo modelagem relacional,
+                                criação de estruturas de dados, elaboração de consultas SQL e gerenciamento de informações,
+                                com foco em desempenho, integridade e confiabilidade dos dados.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna direita -->
+                <div>
+                    <!-- PROJETOS EM DESTAQUE -->
+                    <div class="section">
+                        <div class="section-title">PROJETOS EM DESTAQUE</div>
+                        <div class="two-col">
+                            <div>
+                                <div class="item-sub">Sistema de Gestão de Condomínio (Full Stack)</div>
+                                <div class="item-sub">Tecnologias: Node.js, Express, MySQL, bcrypt, HTML5, CSS3, JavaScript, Chart.js</div>
+                                <div class="lista">
+                                    <ul style="list-style-type: none; padding-left: 0;">
+                                        <li>✔ Sistema completo com login seguro para Administrador e Porteiro (senhas criptografadas com bcrypt)</li>
+                                        <li>✔ Controle de permissões por perfil - Admin tem acesso total, Porteiro tem acesso restrito</li>
+                                        <li>✔ CRUD completo de moradores, porteiros, visitantes, ocorrências e usuários</li>
+                                        <li>✔ Dashboard interativo com gráficos dinâmicos (Chart.js)</li>
+                                        <li>✔ API RESTful integrada ao frontend</li>
+                                        <li>✔ Interface responsiva com menu lateral fixo</li>
+                                        <li>✔ <button class="botao-link" onclick="window.open('https://github.com/bmvbruno/sistema-condominio', '_blank')">
+                                            github.com/bmvbruno/sistema-condominio
+                                        </button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CURSOS -->
+                    <div class="section">
+                        <div class="section-title">CURSOS & TREINAMENTOS</div>
+                        <div class="two-col">
                             <div class="lista">
-                            <ul style="list-style-type: none; padding-left: 0;">
-                                <li>✔ Sistema completo com login seguro para Administrador e Porteiro (senhas
-                                    criptografadas com bcrypt)</li>
-                                <li>✔ Controle de permissões por perfil - Admin tem acesso total, Porteiro tem acesso
-                                    restrito)</li>
-                                <li>✔ CRUD completo de moradores, porteiros, visitantes, ocorrências e usuários</li>
-                                <li>✔ Dashboard interativo com gráficos dinâmicos (Chart.js) - visitantes por status,
-                                    moradores por bloco, visitantes por mês</li>
-                                <li>✔ API RESTful integrada ao frontend</li>
-                                <li>✔ Interface responsiva com menu lateral fixo</li>
-                                <li>✔ <button class="botao-link"
-                                        onclick="window.open('https://github.com/bmvbruno/sistema-condominio', '_blank')">
-                                        github.com/bmvbruno/sistema-condominio </button></li>
-
-                            </ul>
-                             </div>
-                        </div>
-
-
-                    </div>
-                </div>
-
-
-                <!-- CURSOS / TREINAMENTOS (combinando as duas listas) -->
-                <div class="section">
-                    <div class="section-title">CURSOS & TREINAMENTOS</div>
-                    <div class="two-col">
-                        <div class="lista">
-                            <ul style="list-style-type: none; padding-left: 0;">
-                                <li>✔ Introdução a Redes de Computadores (Fundação Bradesco)</li>
-                                <li>✔ Segurança em TI (Fundação Bradesco)</li>
-                                <li>✔ Princípios de Machine Learning (IFAM)</li>
-                                <li>✔ Fundamentos de Aprendizado de Máquina (IFAM)</li>
-                                <li>✔ Introdução em Programação e Tecnologia WEB (IFAM)</li>
-                                <li>✔ Programação para Dispositivos Móveis (IFAM)</li>
-                            </ul>
-                        </div>
-                        <div class="lista">
-                            <ul style="list-style-type: none; padding-left: 0;">
-                                <li>✔ Introdução a Python para Ciência de Dados (IFAM)</li>
-                                <li>✔ Fundamentos de Aprendizado Profundo (IFAM)</li>
-                                <li>✔ Fundamentos de SQL (IFAM)</li>
-                                <li>✔ Fundamentos de Teste de Software (IFAM)</li>
-                                <li>✔ Lógica de Programação com JavaScript (IFAM)</li>
-                            </ul>
+                                <ul style="list-style-type: none; padding-left: 0;">
+                                    <li>✔ Introdução a Redes de Computadores (Fundação Bradesco)</li>
+                                    <li>✔ Segurança em TI (Fundação Bradesco)</li>
+                                    <li>✔ Princípios de Machine Learning (IFAM)</li>
+                                    <li>✔ Fundamentos de Aprendizado de Máquina (IFAM)</li>
+                                    <li>✔ Introdução em Programação e Tecnologia WEB (IFAM)</li>
+                                    <li>✔ Programação para Dispositivos Móveis (IFAM)</li>
+                                </ul>
+                            </div>
+                            <div class="lista">
+                                <ul style="list-style-type: none; padding-left: 0;">
+                                    <li>✔ Introdução a Python para Ciência de Dados (IFAM)</li>
+                                    <li>✔ Fundamentos de Aprendizado Profundo (IFAM)</li>
+                                    <li>✔ Fundamentos de SQL (IFAM)</li>
+                                    <li>✔ Fundamentos de Teste de Software (IFAM)</li>
+                                    <li>✔ Lógica de Programação com JavaScript (IFAM)</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- INFORMAÇÕES ADICIONAIS (idiomas, etc.) -->
-                <div class="section">
-                    <div class="section-title">IDIOMAS</div>
-                    <div>Português: nativo | Inglês: técnico para leitura</div>
-                </div>
+                    <!-- IDIOMAS -->
+                    <div class="section">
+                        <div class="section-title">IDIOMAS</div>
+                        <div>Português: nativo | Inglês: técnico para leitura</div>
+                    </div>
 
-                <!-- SKILLS -->
-                <div class="section">
-                    <div class="section-title">COMPETÊNCIAS COMPORTAMENTAIS</div>
-                    <div class="tabela-container">
-                        <div class="tabela-header">
-                            
-                           
+                    <!-- COMPETÊNCIAS COMPORTAMENTAIS -->
+                    <div class="section">
+                        <div class="section-title">COMPETÊNCIAS COMPORTAMENTAIS</div>
+                        <div class="tabela-container">
+                            <table>
+                                <thead>
+                                    <tr class="habili_dade">
+                                        <th>Habilidade</th>
+                                        <th>Descrição</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="habilidade">Solução de problemas</td>
+                                        <td class="descricao">
+                                            <span class="habi-tag">Analítico e focado em resolver desafios técnicos</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="habilidade">Trabalho em equipe</td>
+                                        <td class="descricao">
+                                            <span class="habi-tag">Colaborativo e comunicativo</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="habilidade">Planejamento</td>
+                                        <td class="descricao">
+                                            <span class="habi-tag">Facilidade com organização e gestão</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="habilidade">Tomada de decisão</td>
+                                        <td class="descricao">
+                                            <span class="habi-tag">Racional e orientado a resultados</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="habilidade">Pontualidade</td>
+                                        <td class="descricao">
+                                            <span class="habi-tag">Compromisso com prazos e entregas</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-
-                        <table>
-                            <thead>
-                                <tr class="habili_dade">
-                                    <th>Habilidade</th>
-                                    <th>Descrição</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="habilidade">Solução de problemas</td>
-                                    <td class="descricao">
-                                        <span class="habi-tag">Analítico e focado em resolver desafios técnicos</span>
-                                    </td>
-                                 
-                                </tr>
-                                <tr>
-                                    <td class="habilidade"> Trabalho em equipe</td>
-                                    <td class="descricao">
-                                        <span class="habi-tag">Colaborativo e comunicativo</span>
-                                        
-                                    </td>
-                                
-                                <tr>
-                                    <td class="habilidade">Planejamento</td>
-                                    <td class="descricao">
-                                        <span class="habi-tag">Facilidade com organização e gestão </span>
-                                    </td>
-                                
-                                </tr>
-                                <tr>
-                                    <td class="habilidade">Tomada de decisão</td>
-                                    <td class="descricao">
-                                        <span class="habi-tag">Racional e orientado a resultados</span>
-                            
-                                    </td>
-                                   
-                                </tr>
-                                <tr>
-                                    <td class="habilidade"> Pontualidade</td>
-                                    <td class="descricao">
-                                        <span class="habi-tag">Compromisso com prazos e entregas</span>
-                                
-                                    </td>
-                                
-                                </tr>
-                            </tbody>
-                        </table>
-
-                       
                     </div>
 
-                </div>
-
-                
-                <!-- SUMMARY / RESUMO -->
-                <div class="section">
-                    <div class="section-title">OBJETIVO PROFISSIONAL</div>
-                    <div
-                        style="background: #f2f7fd; padding: 15px; border-radius: 10px; font-size: 0.95rem; color: #1c3b4f;">
-                        <p>Atuar como Desenvolvedor Full Stack Júnior ou Engenheiro de Software, aplicando meus conhecimentos em Node.js,
-                            MySQL e desenvolvimento web para criar soluções inovadoras e de impacto. Busco oportunidade para crescer tecnicamente
-                            e contribuir com projetos desafiadores. 
-                        </p>
+                    <!-- OBJETIVO PROFISSIONAL -->
+                    <div class="section">
+                        <div class="section-title">OBJETIVO PROFISSIONAL</div>
+                        <div style="background: #f2f7fd; padding: 15px; border-radius: 10px; font-size: 0.95rem; color: #1c3b4f;">
+                            <p>Atuar como Desenvolvedor Full Stack Júnior ou Engenheiro de Software, aplicando meus conhecimentos em Node.js,
+                                MySQL e desenvolvimento web para criar soluções inovadoras e de impacto. Busco oportunidade para crescer tecnicamente
+                                e contribuir com projetos desafiadores.
+                            </p>
+                        </div>
                     </div>
                 </div>
-
-
-
-
             </div>
 
-
-
-            <!-- Rodapé com a marca d'água do template (opcional) -->
-
-
+            <!-- Botão de PDF apenas -->
             <div class="button">
-
-                <button class="botao" onclick="window.location.href='index.html'">Início</button>
-
-                <!--<button class="botao" onclick="window.print()">
-                    📄 Baixar como pdf
-                </button> -->
-
                 <button class="botao" onclick="gerarPDF()">
                     📄 Baixar Currículo em PDF
                 </button>
-
             </div>
-
-
-
         </div>
-        <div class="footer-note">
-
-
-            © 2026 Dev Bruno - Todos os direitos reservados
-
-        </div>
+    </main>
 </body>
-
 </html>

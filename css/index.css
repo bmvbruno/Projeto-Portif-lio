@@ -2,29 +2,150 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 
+:root {
+    --fundo-menu: #1e293b;
+    --fundo-menu-escuro: #1a2434;
+    --cor-destaque: #0ea5e9;
+    --cor-texto-claro: #cbd5e1;
+    --cor-texto: #e2e8f0;
+    --cor-fundo-pagina: #f8fafc;
+    --linha-ativa: #38bdf8;
 }
 
 body {
     font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    background-color: #f4f7f9;
-    display: flex;
-    justify-content: center;
-    padding: 0px;
-    /*espaço na pagina */
+    background-color: var(--cor-fundo-pagina);
     line-height: 1.5;
-    color: #213c5a;
     min-height: 100vh;
-    /* Garante que o corpo ocupe toda a altura da tela */
+    display: flex;
 }
 
-.resume {
-    max-width: 1400px;
-    /* Limita a largura máxima para melhor leitura */
+/* === Menu Lateral Fixo === */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(180deg, var(--fundo-menu) 0%, var(--fundo-menu-escuro) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 25px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 100;
+}
+
+.conteudo-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    /*background-color: #281d4d;*/
-    background: linear-gradient(135deg, #0b2b40 0%, #123d54 100%);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.logo-area {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.logo-menu {
+    width: 75px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.nome-dev {
+    color: var(--cor-texto);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Navegação */
+.navegacao {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    margin-bottom: 50px;
+}
+
+.botao-menu {
+    background: none;
+    border: none;
+    color: var(--cor-texto-claro);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 14px 20px;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.botao-menu.ativo {
+    color: var(--linha-ativa);
+    border-bottom: 2px solid var(--linha-ativa);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.botao-menu:hover:not(.ativo) {
+    color: var(--cor-texto);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Redes Sociais */
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.social-icon {
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+.social-icon:hover {
+    background-color: var(--cor-destaque);
+    transform: scale(1.1);
+}
+
+/* Rodapé do menu */
+.footer-note {
+    color: var(--cor-texto-claro);
+    font-size: 0.75rem;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    opacity: 0.7;
+}
+
+/* === Conteúdo Principal === */
+.conteudo-principal {
+    margin-left: 260px;
+    flex: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 50px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+.secao-inicio {
+    text-align: center;
+    max-width: 700px;
 }
 
 .fundo {
@@ -32,234 +153,122 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 75vh;
-    padding: 20px;
-    /*Adiociona espaçamento*/
-    box-sizing: border-box;
-
+    margin-bottom: 30px;
 }
 
 .fundo .imagem {
-    /*width: 650px;*/
     width: 100%;
-    /*Largura responsiva */
-    max-width: 650px;
-    /*Limite Máximo*/
+    max-width: 220px;
     height: auto;
-    /*Autura Automatica*/
     object-fit: contain;
-    /*Mantém a proporção*/
+    filter: drop-shadow(0 10px 25px rgba(14, 165, 233, 0.15));
 }
 
-/*Grupo dos Potões*/
-.contact-redes-sociais {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding: 50px 20px;
-    width: 100%;
+.texto-apresentacao h2 {
+    color: var(--cor-destaque);
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
 }
 
-contact {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    flex: 1;
+.texto-apresentacao p {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.8;
 }
 
-.botao {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px 20px;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-/*Em tela pequena quebra de texto*/
-@media (max-width: 600px) {
-    .botao {
-        white-space: normal;
-        /*Primeira quebra de texto*/
-    }
-
-}
-
-
-.resdes-sociais {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-
-.social-icon {
-    width: 35px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: scale(1.2);
-}
-
-
-.botao:hover {
-    color: #93a3ec;
-    text-decoration: underline;
-}
-
-
-.footer-note {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 15px;
-    text-align: center;
-    color: white;
-    background: linear-gradient(135deg, #0b2b40 0%, #123d54 100%);
-    border: 1px solid #1b1e31;
-    font-size: 14px;
-    margin: auto;
-}
-
-/*----------Ajuste para telas menores--------------*/
-
-/*Ajuste para Tablet*/
+/* === Responsividade === */
 @media (max-width: 768px) {
-    .contact {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        width: 100%;
-    }
-
-    .contact-redes-sociais {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        padding: 30px 20px;
-    }
-
-    /*Botão maiores para toques*/
-    .botao {
-        font-size: 18px;
-        padding: 12px 25px;
-        width: 80%;
-        text-align: center;
-    }
-
-    /*Ícones maiores*/
-    .social-icon {
-        width: 40px;
-    }
-
-    /*Imagems*/
-    .fundo {
-        min-height: 60vh;
-        /*Altura um pouco menor*/
-        padding: 15px;
-    }
-
-    .fundo .imagem {
-        max-width: 500px;
-        /*Limite menor para tablet*/
-    }
-
-    /*Rodapé*/
-    fooder-note {
+    .menu-lateral {
         position: relative;
-        margin-top: 50px;
-        font-size: 12px;
-        padding: 15px;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 25px 20px;
     }
 
-    /*Ajuste Principal*/
-    .resume {
-        min-height: auto;
-        padding-bottom: 20px;
-    }
-}
-
-/*Ajuste para celular*/
-@media (max-width: 480px) {
-
-    /*Botões ocupam quase toda a tela*/
-    .botao {
-        font-size: 16px;
-        padding: 10px 20px;
-        width: 90%;
+    .conteudo-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
     }
 
-    /*Espaçamento entre Botões*/
-    .contact {
+    .logo-area {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .logo-menu {
+        width: 50px;
+        margin-bottom: 0;
+    }
+
+    .nome-dev {
+        font-size: 1.1rem;
+    }
+
+    .navegacao {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        margin: 10px 0;
+    }
+
+    .botao-menu {
+        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+
+    .redes-sociais {
         gap: 12px;
     }
 
     .social-icon {
-        width: 35px;
+        width: 34px;
+        height: 34px;
     }
 
-    .resdes-sociais {
-        gap: 25px;
+    .footer-note {
+        width: 100%;
+        margin-top: 15px;
     }
 
-    /*Container Redes Sociais */
-    .contact-redes-sociais {
-        padding: 20px 15px;
-        gap: 25px;
-    }
-
-    /*Imagem*/
-    .fundo {
-        min-height: 50vh;
-        /*Altura Menor no celilar*/
-        padding: 10px;
+    .conteudo-principal {
+        margin-left: 0;
+        padding: 30px 20px;
     }
 
     .fundo .imagem {
-        max-width: 90%;
-        /*90% da larguta do tablet*/
-        width: auto;
+        max-width: 160px;
     }
 
-    /*Ajuste no texto do rodapé*/
-    fooder-note {
-        font-size: 11px;
-        padding: 12px;
-        text-align: center;
+    .texto-apresentacao h2 {
+        font-size: 1.7rem;
     }
-
-
 }
 
-/*Ajuste para telas muito pquenas */
-@media (max-width: 360px) {
-    .botao {
-        font-size: 14px;
-        padding: 8px 15px;
-        width: 95%;
-
+@media (max-width: 480px) {
+    .botao-menu {
+        font-size: 0.85rem;
+        padding: 8px 10px;
     }
 
     .social-icon {
-        width: 30px;
+        width: 32px;
+        height: 32px;
     }
 
-    .fundo .imagem {
-
-        max-width: 95%;
+    .texto-apresentacao h2 {
+        font-size: 1.4rem;
     }
 
-    .fooder-note {
-        font-size: 10px;
+    .texto-apresentacao p {
+        font-size: 1rem;
     }
 }
