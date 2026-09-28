@@ -10,7 +10,7 @@
     --cor-destaque: #0ea5e9;
     --cor-texto-claro: #cbd5e1;
     --cor-texto: #e2e8f0;
-    --cor-fundo-pagina: #f8fafc;
+    --cor-fundo-pagina: #1a2434;
     --linha-ativa: #38bdf8;
 }
 
@@ -140,9 +140,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 40px 50px;
-    --fundo-menu: #1e293b;
-    --fundo-menu-escuro: #0f172a;
-    background: linear-gradient(135deg, var(--fundo-menu) 100%, var(--fundo-menu-escuro) 100%);
+    background: color(var(--cor-fundo-pagina));
 }
 
 .secao-inicio {
