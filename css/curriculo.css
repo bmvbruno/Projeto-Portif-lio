@@ -53,7 +53,7 @@ body {
 }
 
 .logo-menu {
-    width: 75px;
+    width: 150px;
     height: auto;
     margin-bottom: 12px;
 }
@@ -136,6 +136,7 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
+     
 }
 
 .resume {
